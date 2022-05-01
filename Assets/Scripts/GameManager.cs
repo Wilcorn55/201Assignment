@@ -47,10 +47,10 @@ public class GameManager : MonoBehaviour
 
 
     }
-    private void buyRoom(Room room)
+    
+    private void BuyRoom(Room room) 
     {
-        if (gold >= room.cost)
-        {
+        if(gold >= room.cost) {
             customCursor.gameObject.SetActive(true);
             customCursor.GetComponent<SpriteRenderer>().sprite = room.GetComponent<SpriteRenderer>().sprite;
             Cursor.visible = false;
@@ -60,4 +60,5 @@ public class GameManager : MonoBehaviour
             grid.SetActive(true);
         }
     }
+        
 }
